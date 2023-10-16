@@ -1,0 +1,28 @@
+{
+  "development": {
+    "username": "effemm",
+    "password": "Oluwafemi",
+    "createDatabaseIfNotExists": true,
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+   
+  },
+  "test": {
+    "username": "effemm",
+    "password": "Oluwafemi",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "createDatabaseIfNotExists": true,
+    "dialect": "postgres"
+    
+  },
+  "production": {
+    "username": "",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
