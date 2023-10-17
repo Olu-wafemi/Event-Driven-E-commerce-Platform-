@@ -22,11 +22,11 @@
 
 ## Introduction
 
-Welcome to our event-driven e-commerce microservices platform! This README provides an in-depth overview of the project, its features, and instructions for setting up and running the application.
+Welcome to my event-driven e-commerce microservices platform! This README provides an in-depth overview of the project, its features, and instructions for setting up and running the application.
 
 ## Project Overview
 
-Our event-driven e-commerce platform is built on a microservices architecture using TypeScript, Sequelize, and PostgreSQL. This platform provides a scalable and flexible solution for managing products, user accounts, and orders.
+The event-driven e-commerce platform is built on a microservices architecture using TypeScript, Sequelize, and PostgreSQL. This platform provides a scalable and flexible solution for managing products, user accounts, and orders.
 
 ## Prerequisites
 
