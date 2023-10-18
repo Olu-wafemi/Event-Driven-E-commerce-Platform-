@@ -46,6 +46,6 @@ Follow these steps to set up and run the application:
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/your-username/ecommerce-microservices.git
-cd ecommerce-microservices
+https://github.com/Olu-wafemi/Event-Driven-E-commerce-Platform-.git
+
 
