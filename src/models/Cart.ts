@@ -33,4 +33,4 @@ class Cart extends Model{
 
 }
 
-export default Cart
+export default Cart 
