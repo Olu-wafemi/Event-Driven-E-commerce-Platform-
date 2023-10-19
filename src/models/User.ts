@@ -16,19 +16,19 @@ export class User extends Model<User> {
 
 
    @Unique
-   @Column
-   username!: string;
+   @Column(DataType.STRING)
+   username?: string;
 
 
     @Unique
     @Column(DataType.STRING)
-    email!: string;
+    email?: string;
 
     @Column(DataType.STRING)
-    password!: string;
+    password?: string;
 
 
     @Column(DataType.STRING)
-    role!: string
+    role?: string
 }
 
