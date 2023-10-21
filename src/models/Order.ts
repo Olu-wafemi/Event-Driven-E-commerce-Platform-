@@ -8,7 +8,9 @@ import {
     BelongsTo,
     ForeignKey,
   } from 'sequelize-typescript';
+import { Col } from 'sequelize/types/utils';
   import {User} from '../models/User'; // Adjust the import path based on your project's file structure
+import Product from './Product';
 
   // Define the Orders model using Sequelize decorators
   @Table({
@@ -23,10 +25,22 @@ import {
     @ForeignKey(() => User)
     @Column(DataType.UUID)
     userId!: string; // Foreign key to link the order to a user
+
+    
   
     @BelongsTo(() => User)
     user!: User; // Define a relationship with the User model
   
+    @ForeignKey(() => Product)
+    @Column(DataType.STRING)
+    producId?: string
+
+    @BelongsTo(() => Product)
+    product?: Product
+
+    @Column(DataType.NUMBER)
+    quantity?: number
+
     @Column(DataType.DATE)
     orderDate!: Date; // Date and time when the order was placed
   

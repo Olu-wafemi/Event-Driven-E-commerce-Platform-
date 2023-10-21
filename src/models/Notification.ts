@@ -1,6 +1,6 @@
 import { Table, Model, PrimaryKey, Default, DataType, Column, ForeignKey, BelongsTo } from 'sequelize-typescript';
-import { User } from './User';
-
+//import { User } from './User';
+import User from './User';
 @Table({
     tableName: 'notification'
 })

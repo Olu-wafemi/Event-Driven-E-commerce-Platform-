@@ -3,7 +3,9 @@ import jsonwebtoken from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import validator  from 'validator'
 import { validateLoginData, validateRegistrationData} from '../validations/user-validation'
-import { User } from '../models/User';
+import User from '../models/User';
+import  dotenv from 'dotenv'
+//import  from '../models/User';
 export const UserController = {
     async register(req: Request, res: Response){
         try{
@@ -19,8 +21,10 @@ export const UserController = {
             const newUser = await User.create({
                 username,
                 email,
-                password: hashedPassword
-            });
+                password
+
+            })
+
 
             res.status(201).json(newUser)
         }catch(error){
@@ -50,13 +54,13 @@ export const UserController = {
                 return res.status(401).json({error: 'Incorrect password'})
 
             }
-            const Secret = process.env.SECRET
+            var Secret = process.env.SECRET
 
             const token = jsonwebtoken.sign({
                 username,
                 password
                 
-            }, Secret )
+            }, Secret)
             res.json({message: "Login Successful", })
         
 

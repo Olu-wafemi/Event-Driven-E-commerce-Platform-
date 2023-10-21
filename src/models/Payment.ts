@@ -1,4 +1,5 @@
-import { User } from './User';
+import User from './User';
+//import { User } from './User';
 import Order from './Order';
 import {
     Table,

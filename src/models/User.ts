@@ -7,28 +7,30 @@ import { Table, Column, Model, DataType,
 } from 'sequelize-typescript';
 import { Col } from 'sequelize/types/utils';
 
-@Table
-export class User extends Model<User> {
+@Table({
+    tableName: 'user'
+})
+class User extends Model {
     @PrimaryKey
     @Default(DataType.UUIDV4)
     @Column(DataType.UUID)
-    id?: string;
+    id!: string;
 
 
    @Unique
    @Column(DataType.STRING)
-   username?: string;
+   username!: string;
 
 
     @Unique
     @Column(DataType.STRING)
-    email?: string;
+    email!: string;
 
     @Column(DataType.STRING)
-    password?: string;
+    password!: string;
 
 
     @Column(DataType.STRING)
-    role?: string
+    role!: string
 }
-
+export default User;

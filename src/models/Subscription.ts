@@ -1,7 +1,7 @@
 import { BelongsTo, Column, DataType, Default, ForeignKey, Model, PrimaryKey, Table } from "sequelize-typescript";
-import { User } from './User';
+//import { User } from './User';
 
-
+import User from './User';
 @Table({
     tableName: 'subscriptions'
 })

@@ -19,20 +19,20 @@ class Product extends  Model{
 
 
     @Column(DataType.STRING)
-    name!: string;
+    name?: string;
 
     @Column(DataType.TEXT)
-    description!: string
+    description?: string
 
 
     @Column(DataType.DECIMAL(10,2))
     price!: number;
 
     @Column(DataType.INTEGER)
-    stock!: number;
+    stock?: number;
 
     @Column(DataType.STRING)
-    imageUrl!:string
+    imageUrl?:string
 
 
 

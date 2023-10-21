@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import Notification from '../models/Notification';
-import { User } from "../models/User";
+//import { User } from "../models/User";
 
 export const NotificationController = {
     async createNotification(req: Request, res: Response){
