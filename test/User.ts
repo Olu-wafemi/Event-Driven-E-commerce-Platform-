@@ -24,7 +24,6 @@ describe('User Controller', () => {
       expect(createdUser).to.have.property('email', sampleUser.email);
      
 
-      // Optionally, you can clean up the test data, e.g., by deleting the test user
       await User.destroy({ where: { id: createdUser.id } });
     });
   });
