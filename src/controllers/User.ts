@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt'
 import validator  from 'validator'
 import { validateLoginData, validateRegistrationData} from '../validations/user-validation'
 import User from '../models/User';
-import  dotenv from 'dotenv'
+
 //import  from '../models/User';
 export const UserController = {
     async register(req: Request, res: Response){
