@@ -1,4 +1,5 @@
-import { User } from './User';
+import User from './User';
+
 import {
     Table,
     Model,
@@ -36,6 +37,9 @@ class Address extends Model{
 
     @Column(DataType.STRING)
     state?: string
+
+    @Column(DataType.STRING)
+    country?: string
 
     @Column(DataType.STRING)
     postalCode?: string
