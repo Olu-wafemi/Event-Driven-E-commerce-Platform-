@@ -1,7 +1,8 @@
 import request from 'supertest'
 
 import app from '../index'
-import {sequelize} from '../database'
+import sequelize from '../database/database';
+
 
 
 beforeAll(async()=>{
@@ -34,6 +35,8 @@ describe('User Controller', ()=>{
         email: 'test@example.com',
         password: 'testpassword',
       })
+    expect(response.status).toBe(400)
+
     })
   })
 })
