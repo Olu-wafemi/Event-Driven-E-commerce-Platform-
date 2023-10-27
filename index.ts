@@ -1,16 +1,26 @@
 import express from 'express';
-import { sequelize } from './database'; // Import your Sequelize instance here
-import { createTables } from './models'; // Import a function to create database tables
-import routes from './routes'; // Import your application routes
+import { Sequelize } from 'sequelize-typescript';
+ // Import your Sequelize instance here
+//import { createTables } from './models'; // Import a function to create database tables
+//import routes from './routes'; // Import your application routes
+import databseConfig from './config/config.json'
+import sequelize from './database/database';
+
+
+
+process.env.NODE_ENV = 'test'
+
+
 
 const app = express();
+
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON data in requests
 app.use(express.json());
 
 // Set up your application routes
-app.use('/api', routes); // You can define routes in your routes module
+//app.use('/api', routes); // You can define routes in your routes module
 
 // Initialize Sequelize and create database tables
 sequelize
@@ -26,3 +36,6 @@ sequelize
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
+export default app

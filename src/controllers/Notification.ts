@@ -36,6 +36,19 @@ export const NotificationController = {
             res.status(500).json({error: "Error creating notificatiion"})
 
         }
+    },
+    async getUserNotifications(req:Request, res: Response){
+        try{
+            const{userId} = req.params
+
+            const notifications = await Notification.findAll({
+                where: {userId}
+            })
+            res.status(201).json({status:true, data: notifications})
+        }
+        catch{
+            return res.status(500).json({status:false, message: "Error fetching user notification"})
+        }
     }
 
 }
