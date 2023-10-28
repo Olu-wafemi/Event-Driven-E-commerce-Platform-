@@ -9,7 +9,7 @@ import User from '../models/User';
 export const UserController = {
     async register(req: Request, res: Response){
         try{
-            const {username, email, password} = req.body
+            const {username, email, password,role} = req.body
 
             const registrationError = validateRegistrationData(username, email, password)
             if(registrationError){
@@ -21,7 +21,9 @@ export const UserController = {
             const newUser = await User.create({
                 username,
                 email,
-                password
+                password,
+                role
+
 
             })
 
@@ -48,7 +50,9 @@ export const UserController = {
                 where: {username}
             })
 
-            const passwordMatch = await bcrypt.compare(password,user.password)
+            const user_password = user!.password
+
+            const passwordMatch = await bcrypt.compare(password, user_password)
 
             if(!passwordMatch){
                 return res.status(401).json({error: 'Incorrect password'})
@@ -60,8 +64,8 @@ export const UserController = {
                 username,
                 password
                 
-            }, Secret)
-            res.json({message: "Login Successful", })
+            }, "Secret")
+            res.status(201).json({message: "Login Successful", })
         
 
         }catch(error){

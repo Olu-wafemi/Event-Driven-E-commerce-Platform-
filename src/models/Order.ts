@@ -9,8 +9,9 @@ import {
     ForeignKey,
   } from 'sequelize-typescript';
 import { Col } from 'sequelize/types/utils';
-  import {User} from '../models/User'; // Adjust the import path based on your project's file structure
+ // import  from '../models/User'; // Adjust the import path based on your project's file structure
 import Product from './Product';
+import User from './User';
 
   // Define the Orders model using Sequelize decorators
   @Table({

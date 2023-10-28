@@ -2,9 +2,11 @@ import express from 'express';
 import { Sequelize } from 'sequelize-typescript';
  // Import your Sequelize instance here
 //import { createTables } from './models'; // Import a function to create database tables
-//import routes from './routes'; // Import your application routes
+import index from './src/routes/index'
 import databseConfig from './config/config.json'
 import sequelize from './database/database';
+
+
 
 
 
@@ -13,6 +15,8 @@ process.env.NODE_ENV = 'test'
 
 
 const app = express();
+
+index(app)
 
 const PORT = process.env.PORT || 3000;
 

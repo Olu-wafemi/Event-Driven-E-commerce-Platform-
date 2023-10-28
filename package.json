@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "start": "ts-node index.ts",
+    "dev": "ts-node --esm index.ts"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
     "@types/jsonwebtoken": "^9.0.4",
     "@types/mocha": "^10.0.3",
     "@types/supertest": "^2.0.15",
-    "ts-jest": "^29.1.1"
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1"
   }
 }
