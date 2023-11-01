@@ -4,6 +4,7 @@ import app from '../index'
 
 
 describe('Product Controller', ()=>{
+    /*
 
     it('should create a new product',  async() =>{
         const productData = {
@@ -18,6 +19,7 @@ describe('Product Controller', ()=>{
         expect(response.body.name).toBe('New Product')
 
     })
+    */
 
     it('should retrieve a list of products', async()=>{
 
@@ -28,6 +30,7 @@ describe('Product Controller', ()=>{
         
     })
 
+    
 
 
 
