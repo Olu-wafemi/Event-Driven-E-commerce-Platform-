@@ -1,6 +1,10 @@
 import { Request, Response } from 'express';
 import Cart from '../models/Cart';
 import CartItem from '../models/CartItem';
+import sequelize from '../../database/database'
+
+sequelize.addModels([Cart, CartItem])
+
 
 export const CartController = {
 

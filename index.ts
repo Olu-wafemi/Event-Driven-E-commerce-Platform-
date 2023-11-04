@@ -16,17 +16,9 @@ process.env.NODE_ENV = 'test'
 
 const app = express();
 
-index(app)
-
-const PORT = process.env.PORT || 3000;
-
-// Middleware to parse JSON data in requests
 app.use(express.json());
 
-// Set up your application routes
-//app.use('/api', routes); // You can define routes in your routes module
 
-// Initialize Sequelize and create database tables
 sequelize
   .sync({ force: false }) // Use force: true to drop and recreate tables (in development only)
   .then(() => {
@@ -35,6 +27,19 @@ sequelize
   .catch((error) => {
     console.error('Error syncing database:', error);
   });
+
+index(app)
+
+const PORT = process.env.PORT || 3000;
+
+// Middleware to parse JSON data in requests
+
+
+
+//app.use('/api', routes); // You can define routes in your routes module
+
+// Initialize Sequelize and create database tables
+
 
 // Start the server
 app.listen(PORT, () => {

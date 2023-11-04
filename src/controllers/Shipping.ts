@@ -1,5 +1,10 @@
 import { Response, Request } from 'express';
 import ShippingMethod from '../models/Shipping';
+
+
+import sequelize from '../../database/database'
+
+sequelize.addModels([ShippingMethod])
 export const ShippingController = {
     async createShippingMethod(req: Request, res: Response){
 

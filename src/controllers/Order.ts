@@ -4,6 +4,9 @@ import Product from '../models/Product';
 import Order from '../models/Order';
 import User from '../models/User';
 
+import sequelize from '../../database/database'
+
+sequelize.addModels([Order])
 export const OrderController = {
     async createOrder(req: Request, res: Response){
         try{

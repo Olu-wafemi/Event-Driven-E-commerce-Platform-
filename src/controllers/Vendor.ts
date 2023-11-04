@@ -1,6 +1,10 @@
 import { Request, Response } from 'express';
 import Vendor from '../models/Vendor';
 
+import sequelize from '../../database/database'
+
+sequelize.addModels([Vendor])
+
 export const VendorContoller = {
     async createVendor(req: Request, res:Response){
 

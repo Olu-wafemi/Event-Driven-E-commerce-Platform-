@@ -2,6 +2,10 @@ import { Request, Response } from "express";
 import Notification from '../models/Notification';
 //import { User } from "../models/User";
 
+
+import sequelize from '../../database/database'
+
+sequelize.addModels([Notification])
 export const NotificationController = {
     async createNotification(req: Request, res: Response){
         try{

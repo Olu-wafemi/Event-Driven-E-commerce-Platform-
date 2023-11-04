@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import Coupon from '../models/Coupon';
+import sequelize from '../../database/database'
 
+sequelize.addModels([Coupon])
 
 export const CouponController = {
     async createCoupon(req: Request, res: Response){

@@ -6,6 +6,11 @@ import { validateLoginData, validateRegistrationData} from '../validations/user-
 import User from '../models/User';
 
 //import  from '../models/User';
+import sequelize from '../../database/database'
+
+sequelize.addModels([User])
+
+
 export const UserController = {
     async register(req: Request, res: Response){
         try{
@@ -40,6 +45,8 @@ export const UserController = {
     async login(req: Request, res: Response){
         try{
             const {username, password} = req.body
+
+            console.log(username)
 
             const loginError = validateLoginData(username, password)
             if (loginError){

@@ -1,6 +1,13 @@
 import { Request, Response } from 'express';
 import Payment from '../models/Payment';
 
+
+
+import sequelize from '../../database/database'
+import Order from '../models/Order';
+import Product from '../models/Product';
+
+sequelize.addModels([Payment,Order, Product])
 export const PaymentController = {
     async processPayment(req: Request, res: Response){
         try{

@@ -1,5 +1,9 @@
 import { Request, Response } from 'express';
 import Review from '../models/Review';
+
+import sequelize from '../../database/database'
+
+sequelize.addModels([Review])
 export const ReviewController = {
     async createReview(req: Request, res: Response){
 

@@ -1,6 +1,9 @@
 import { Request, Response } from 'express';
 import Product from '../models/Product';
 
+import sequelize from '../../database/database'
+
+sequelize.addModels([Product])
 
 export const ProductController = {
  
