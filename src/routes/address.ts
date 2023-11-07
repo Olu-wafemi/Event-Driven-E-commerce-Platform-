@@ -4,8 +4,8 @@ const Router = express.Router()
 
 import {AddressController} from "../controllers/Address"
 
-Router.post('/addresses', AddressController.createAdress)
+Router.post('/address', AddressController.createAdress)
 
-Router.get('/addresses/:id', AddressController.getUserAddresses)
+Router.get('/address/:id', AddressController.getUserAddresses)
 
 export default Router

@@ -5,14 +5,14 @@ import Address from '../models/Address';
 export const AddressController = {
     async createAdress(req: Request, res: Response){
         try{
-            const {userId, street, city, state, postalCode,country}  = req.body
+            const {userId, street, city, state, postalCode,country, isShippingAddress, isBillingAddress}  = req.body
 
             const newAddress= await Address.create({
                 userId, street,
                 city,
                 state,
                 postalCode,
-                country
+                country, isBillingAddress,isShippingAddress
 
             })
 
@@ -20,20 +20,21 @@ export const AddressController = {
 
         }
         catch(error){
+            console.log(error)
             res.status(500).json({error: 'Error creating address'})
         }
     },
 
     async getUserAddresses(req: Request, res: Response){
         try{
-            const {userId} = req.params;
+            const {id} = req.params;
 
             const addresses =await Address.findAll({
-                where:{userId},
+                where:{id},
                 
             })
 
-            res.json(addresses)
+            res.status(201).json(addresses)
         }catch(error){
             res.status(500).json({error: 'Error feching addresses'})
         }

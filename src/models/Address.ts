@@ -23,7 +23,7 @@ class Address extends Model{
 
 
     @ForeignKey(()=> User)
-    @Column(DataType.UUID)
+    @Column(DataType.STRING)
     userId?: string
 
     @BelongsTo(()=> User)

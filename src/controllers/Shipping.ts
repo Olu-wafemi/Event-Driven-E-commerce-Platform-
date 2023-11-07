@@ -4,7 +4,7 @@ import ShippingMethod from '../models/Shipping';
 
 import sequelize from '../../database/database'
 
-sequelize.addModels([ShippingMethod])
+//sequelize.addModels([ShippingMethod])
 export const ShippingController = {
     async createShippingMethod(req: Request, res: Response){
 

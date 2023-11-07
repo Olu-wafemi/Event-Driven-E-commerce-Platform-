@@ -32,8 +32,8 @@ class Vendor extends Model{
     @Column(DataType.STRING)
     contactEmail?: string
 
-    @Column(DataType.NUMBER)
-    phone?: number
+    @Column(DataType.STRING)
+    phone?: String
 
     @Column(DataType.STRING)
     website?: string

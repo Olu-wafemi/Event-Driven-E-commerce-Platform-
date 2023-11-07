@@ -1,5 +1,6 @@
-import { User } from './User';
+
 import Product from './Product';
+import User from './User';
 import {
     Model,
     DataType,

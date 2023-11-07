@@ -28,8 +28,8 @@ class Cart extends Model{
     @BelongsTo(()=> User)
     user?: User;
 
-    //@HasMany(()=> CartItem)
-    //items?: CartItem[];
+    @HasMany(()=> CartItem)
+    items?: CartItem[];
 
 }
 

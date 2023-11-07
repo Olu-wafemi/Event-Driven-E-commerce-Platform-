@@ -27,7 +27,7 @@ class Invoice extends Model{
     id?: string
 
     @ForeignKey(()=> Order)
-    @Column(DataType.STRING)
+    @Column(DataType.UUID)
     orderId?: string
 
 

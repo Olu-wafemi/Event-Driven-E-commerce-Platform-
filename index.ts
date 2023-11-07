@@ -5,8 +5,24 @@ import { Sequelize } from 'sequelize-typescript';
 import index from './src/routes/index'
 import databseConfig from './config/config.json'
 import sequelize from './database/database';
+import Address from './src/models/Address';
+import Cart from './src/models/Cart';
+import CartItem from './src/models/CartItem';
+import Category from './src/models/Category';
+import Coupon from './src/models/Coupon';
+import Invoice from './src/models/Invoice';
+import Notification from './src/models/Notification';
+import Order from './src/models/Order';
+import Payment from './src/models/Payment';
+import Product from './src/models/Product';
+import Review from './src/models/Review';
+import ShippingMethod from './src/models/Shipping';
+import Subscription from './src/models/Subscription';
+import Transaction from './src/models/Transaction';
+import User from './src/models/User';
+import Vendor from './src/models/Vendor';
 
-
+sequelize.addModels([Address,  Cart,CartItem,Category,Coupon,Invoice, Notification, Order,Payment,Product,Review,ShippingMethod,Subscription,Transaction,User,Vendor])
 
 
 

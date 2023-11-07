@@ -8,7 +8,7 @@ import User from '../models/User';
 //import  from '../models/User';
 import sequelize from '../../database/database'
 
-sequelize.addModels([User])
+///sequelize.addModels([User])
 
 
 export const UserController = {

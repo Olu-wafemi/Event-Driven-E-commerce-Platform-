@@ -29,7 +29,7 @@ class Payment extends Model{
     id?: string;
 
     @ForeignKey(()=> Order)
-    @Column(DataType.STRING)
+    @Column(DataType.UUID)
     userId?:string
 
     @BelongsTo(()=> Order)

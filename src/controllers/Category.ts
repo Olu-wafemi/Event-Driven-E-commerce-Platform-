@@ -3,7 +3,7 @@ import Category from '../models/Category';
 
 import sequelize from '../../database/database'
 
-sequelize.addModels([Category])
+//sequelize.addModels([Category])
 
 export const CategoryController = {
     async createCategory(req: Request, res: Response){

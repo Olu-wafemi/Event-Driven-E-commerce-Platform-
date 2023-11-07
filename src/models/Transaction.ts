@@ -14,8 +14,8 @@ class Transaction extends Model{
     id?: string
 
     @ForeignKey(()=> Order)
-    @Column(DataType.STRING)
-    orderId?: string
+    @Column(DataType.UUID)
+    orderId?: String
 
 
     @BelongsTo(()=> Order)

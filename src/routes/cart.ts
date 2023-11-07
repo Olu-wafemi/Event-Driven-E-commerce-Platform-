@@ -8,6 +8,6 @@ import {CartController} from "../controllers/Cart"
 
 Router.post("/carts", CartController.addToCart)
 
-Router.get("/carts/:id", CartController.getUserCart)
+Router.get("/carts/:userId", CartController.getUserCart)
 
 export default Router

@@ -4,7 +4,7 @@ import Subscription from '../models/Subscription';
 
 import sequelize from '../../database/database'
 
-sequelize.addModels([Subscription])
+//sequelize.addModels([Subscription])
 export const SubscriptionController ={
 
     async createSubscription(req: Request, res: Response){

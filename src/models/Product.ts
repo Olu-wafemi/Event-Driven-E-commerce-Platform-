@@ -1,7 +1,9 @@
+import Category from './Category';
 import { Table, Column, Model, DataType,
     PrimaryKey,
     Default,
-    Unique
+    Unique,
+    ForeignKey
 
 
 } from 'sequelize-typescript';
@@ -20,6 +22,10 @@ class Product extends  Model{
 
     @Column(DataType.STRING)
     name?: string;
+
+    @ForeignKey(()=> Category)
+    @Column(DataType.UUID)
+    categoryId?: String
 
     @Column(DataType.TEXT)
     description?: string

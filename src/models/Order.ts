@@ -33,20 +33,20 @@ import User from './User';
     user!: User; // Define a relationship with the User model
   
     @ForeignKey(() => Product)
-    @Column(DataType.STRING)
-    producId?: string
+    @Column(DataType.UUID)
+    productId?: String
 
     @BelongsTo(() => Product)
     product?: Product
 
-    @Column(DataType.NUMBER)
-    quantity?: number
+    @Column(DataType.STRING)
+    quantity?: String
 
     @Column(DataType.DATE)
     orderDate!: Date; // Date and time when the order was placed
   
     @Column(DataType.DECIMAL(10, 2))
-    totalAmount!: number; // Total amount of the order (with two decimal places)
+    totalAmount!: String  ; // Total amount of the order (with two decimal places)
   }
   
   export default Order; // Export the Orders model

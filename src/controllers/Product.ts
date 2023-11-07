@@ -3,9 +3,26 @@ import Product from '../models/Product';
 
 import sequelize from '../../database/database'
 
-sequelize.addModels([Product])
+//sequelize.addModels([Product])
 
 export const ProductController = {
+  async createProduct(req:Request, res: Response){
+    try{
+      const {name, description, price, stock, categoryId } = req.body
+
+      await Product.create({
+        name, price,description,stock, categoryId
+      })
+
+      return res.status(201).json({status: true, message: "product created"})
+
+    }catch(error){
+      console.log(error)
+      return res.status(500).json({status:false, message: "true"})
+
+    }
+
+  },
  
   async getProducts(req: Request, res: Response) {
     try {

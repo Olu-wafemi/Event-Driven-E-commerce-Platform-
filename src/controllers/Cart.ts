@@ -3,7 +3,7 @@ import Cart from '../models/Cart';
 import CartItem from '../models/CartItem';
 import sequelize from '../../database/database'
 
-sequelize.addModels([Cart, CartItem])
+//sequelize.addModels([Cart, CartItem])
 
 
 export const CartController = {
@@ -15,7 +15,7 @@ export const CartController = {
             const userCart = await Cart.findOrCreate({where: {userId}})
 
             const [cartItem] = await CartItem.findOrCreate({
-                where:{cartId: userCart[0].id, productId},
+                where:{id: userCart[0].id, productId},
                 defaults:{quantity},
             })
 
@@ -28,6 +28,7 @@ export const CartController = {
             res.status(201).json(cartItem);
         }
         catch(error){
+            console.log(error)
             res.status(500).json({erorr: "Error adding to cart"})
         }
     },
@@ -43,6 +44,7 @@ export const CartController = {
 
             res.json(userCart);
         }catch(error){
+            console.log(error)
             res.status(500).json({error:' error fetching user cart'})
         }
     },
@@ -65,6 +67,7 @@ export const CartController = {
 
         }
         catch(error){
+            console.log(error)
 
             res.status(500).json({ error: 'Error updating cart item quantity'})
         }

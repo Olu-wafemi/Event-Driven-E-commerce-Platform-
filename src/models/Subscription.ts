@@ -13,7 +13,7 @@ class Subscription extends Model{
     id?: string
 
     @ForeignKey(()=> User)
-    @Column(DataType.STRING)
+    @Column(DataType.UUID)
     userId?: string
 
     @BelongsTo(()=> User)

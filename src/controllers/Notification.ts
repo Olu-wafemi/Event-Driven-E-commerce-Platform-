@@ -5,7 +5,7 @@ import Notification from '../models/Notification';
 
 import sequelize from '../../database/database'
 
-sequelize.addModels([Notification])
+//sequelize.addModels([Notification])
 export const NotificationController = {
     async createNotification(req: Request, res: Response){
         try{
