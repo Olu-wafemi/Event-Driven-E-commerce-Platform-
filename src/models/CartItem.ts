@@ -11,6 +11,7 @@ import {
     DataType
 } from 'sequelize-typescript'
 import { Col } from 'sequelize/types/utils';
+import Cart from './Cart';
 
 @Table({
     tableName: 'cart_items',
@@ -27,6 +28,14 @@ class CartItem extends Model{
 
     @BelongsTo(()=> Product)
     product?: Product
+  
+    @ForeignKey(()=> Cart)
+    @Column(DataType.UUID)
+    cartId?: Cart
+
+    @BelongsTo(()=> Cart)
+    cart?: Cart
+    
 
     @Column(DataType.INTEGER)
     quantity?: number

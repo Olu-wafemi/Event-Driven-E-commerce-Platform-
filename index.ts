@@ -36,7 +36,7 @@ app.use(express.json());
 
 
 sequelize
-  .sync({ force: false }) // Use force: true to drop and recreate tables (in development only)
+  .sync({ force: false}) // Use force: true to drop and recreate tables (in development only)
   .then(() => {
     console.log('Database and tables are synchronized.');
   })

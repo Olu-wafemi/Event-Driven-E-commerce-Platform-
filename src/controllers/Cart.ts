@@ -15,7 +15,7 @@ export const CartController = {
             const userCart = await Cart.findOrCreate({where: {userId}})
 
             const [cartItem] = await CartItem.findOrCreate({
-                where:{id: userCart[0].id, productId},
+                where:{ cartId: userCart[0].id, productId},
                 defaults:{quantity},
             })
 

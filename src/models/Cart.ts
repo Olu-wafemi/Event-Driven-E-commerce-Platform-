@@ -29,7 +29,7 @@ class Cart extends Model{
     user?: User;
 
     @HasMany(()=> CartItem)
-    items?: CartItem[];
+    items?: CartItem[];// This links to cartitem, 
 
 }
 
