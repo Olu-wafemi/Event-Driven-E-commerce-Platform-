@@ -10,10 +10,10 @@ import sequelize from '../../database/database'
 export const OrderController = {
     async createOrder(req: Request, res: Response){
         try{
-            const { userId, productid, quantity } = req.body;
+            const { userId, productId, quantity } = req.body;
 
             const user = await User.findByPk(userId)
-            const product = await Product.findByPk(productid)
+            const product = await Product.findByPk(productId)
 
             if(!user || !product){
                 return res.status(400).json({ status: false, error: 'Invalid user or product'})
@@ -24,16 +24,21 @@ export const OrderController = {
 
                 const newOrder = await Order.create({
                     userId,
-                    productid,
+                    productId,
                     quantity,
                     totalAmount
 
                 })
 
+                return res.status(201).json({status: true, message: "succesful"})
+
             }
+
+
             
         
         catch(error){
+            console.log(error)
             res.status(500).json({error: 'Error creating order'})
 
         }

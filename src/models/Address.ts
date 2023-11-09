@@ -1,4 +1,5 @@
 import User from './User';
+import sequelize from '../../database/database';
 
 import {
     Table,
@@ -10,6 +11,7 @@ import {
     PrimaryKey,
     DataType,
 } from 'sequelize-typescript'
+
 
 
 @Table({
@@ -54,5 +56,9 @@ class Address extends Model{
 
 
 }
+
+const AddressModel = Address
+
+sequelize.models.push(AddressModel)
 
 export default Address;

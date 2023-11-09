@@ -6,7 +6,7 @@ const Router = express.Router()
 
 Router.post("/createpayment", PaymentController.processPayment)
 
-Router.get("/getOrderpayents",PaymentController.getOrderPayments)
+Router.get("/getOrderpayents/:orderId",PaymentController.getOrderPayments)
 
 
 

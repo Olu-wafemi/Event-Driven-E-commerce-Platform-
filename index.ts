@@ -1,5 +1,6 @@
 import express from 'express';
 import { Sequelize } from 'sequelize-typescript';
+
  // Import your Sequelize instance here
 //import { createTables } from './models'; // Import a function to create database tables
 import index from './src/routes/index'
@@ -22,7 +23,7 @@ import Transaction from './src/models/Transaction';
 import User from './src/models/User';
 import Vendor from './src/models/Vendor';
 
-sequelize.addModels([Address,  Cart,CartItem,Category,Coupon,Invoice, Notification, Order,Payment,Product,Review,ShippingMethod,Subscription,Transaction,User,Vendor])
+
 
 
 
@@ -36,7 +37,7 @@ app.use(express.json());
 
 
 sequelize
-  .sync({ force: false}) // Use force: true to drop and recreate tables (in development only)
+  .sync({ force: false}) // force: true to drop and recreate tables (in development only)
   .then(() => {
     console.log('Database and tables are synchronized.');
   })
@@ -45,6 +46,12 @@ sequelize
   });
 
 index(app)
+
+sequelize.options.logging = false
+//sequelize.addModels([Address,  Cart,CartItem,Category,Coupon,Invoice, Notification, Order,Payment,Product,Review,ShippingMethod,Subscription,Transaction,User,Vendor])
+
+
+
 
 const PORT = process.env.PORT || 3000;
 

@@ -13,7 +13,7 @@ describe('Product Controller', ()=>{
             description: "Product used to cure infection",
             stock: 20,
             price: 19.99,
-            categoryId: "04819814-82f6-4804-8f81-a34c768ff591"
+            categoryId: "f2fdcdb1-3007-470a-b1f8-13dc5e1aaf7d"
         }
 
         const response = await request(app).post('/api/products')

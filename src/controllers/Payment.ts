@@ -39,6 +39,7 @@ export const PaymentController = {
 
         }
         catch(error){
+            console.log(error)
             res.status(500).json({error:' Error feching orders'})
         }
     }

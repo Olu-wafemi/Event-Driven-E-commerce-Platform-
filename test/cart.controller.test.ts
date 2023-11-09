@@ -7,8 +7,8 @@ describe("cart controller", ()=>{
 
         const cartdata = {
 
-            userId: "4f0a81cc-90cf-4983-80e0-95b5a3f824fe",
-            productId: "1e501f49-1502-49f5-bd90-ef30a187bb1c",
+            userId: "c1922258-958b-4094-8dce-0743c274a275",
+            productId: "c8fe3414-a1b9-46c6-8f9c-b818a7e058bd",
             quantity: 200
 
 
@@ -28,8 +28,8 @@ describe("cart controller", ()=>{
     it("Shold retrieve user's cart", async()=>{
 
         const createdCart = await Cart.create({
-            userId: "4f0a81cc-90cf-4983-80e0-95b5a3f824fe",
-            productId: "1e501f49-1502-49f5-bd90-ef30a187bb1c",
+            userId: "c1922258-958b-4094-8dce-0743c274a275",
+            productId: "c8fe3414-a1b9-46c6-8f9c-b818a7e058bd",
             quantity: 2900
             
              
