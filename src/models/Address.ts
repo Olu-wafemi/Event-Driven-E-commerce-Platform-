@@ -59,6 +59,6 @@ class Address extends Model{
 
 const AddressModel = Address
 
-sequelize.models.push(AddressModel)
+//sequelize.models.push(AddressModel)
 
 export default Address;
