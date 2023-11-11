@@ -13,7 +13,21 @@ describe("Review Controller", ()=>{
             comment:"The Product is a nice product"
         }
 
-        const response = 
+        const response = await request(app).post('/api//createReview')
+
+        expect(response.statusCode).toBe(201)
+
+
+    })
+
+    it("Should retrieve a list of Product reviews", async()=>{
+
+        const productId = "c8fe3414-a1b9-46c6-8f9c-b818a7e058bd"
+
+        const response = await request(app).get("/api/getProductReviews")
+
+        expect(response.statusCode).toBe(201)
+
 
 
     })
