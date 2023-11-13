@@ -5,6 +5,6 @@ import { ShippingController } from '../controllers/Shipping';
 const Router = express.Router()
 
 Router.post("/createShipping", ShippingController.createShippingMethod)
-Router.get("/getshipping", ShippingController.getShippingMethods)
+Router.get("/getShipping", ShippingController.getShippingMethods)
 
 export default Router
