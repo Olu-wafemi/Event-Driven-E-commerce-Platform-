@@ -8,6 +8,9 @@ import categoryRouter from "./category"
 import addressRouter from "./Address"
 import ReviewRouter from "./review"
 import ShippingRouter from "./Shipping"
+import SubscriptionRouter from "./subscription"
+import CouponRouter from "./coupon"
+
 const index = (app: any) => {
     app.use('/api/users', Router);
     app.use('/api', paymentRouter)
@@ -18,6 +21,9 @@ const index = (app: any) => {
      app.use('/api', orderRouter)
      app.use('/api', ReviewRouter)
      app.use('/api', ShippingRouter)
+     app.use('/api', SubscriptionRouter)
+     app.use('/api', CouponRouter)
+
    
     //app.use('/api',huntRouter)
   };
