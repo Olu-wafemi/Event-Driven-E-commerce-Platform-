@@ -34,7 +34,6 @@ Before you begin, ensure you have the following prerequisites:
 
 - Node.js and npm installed
 - PostgreSQL database server
-- Redis server (for event messaging)
 - Git for version control
 
 ## Getting Started
