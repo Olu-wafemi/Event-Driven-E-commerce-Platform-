@@ -22,7 +22,11 @@ describe("Notification test", ()=>{
 
     it("Should retrieve a list of notifications", async()=>{
 
-        const
+        const userId = "cd533804-22cd-4efb-a5c0-6a775c49ef71"
+
+        const response = await request(app).get(`/api/getNotfifcation:${userId}`)
+
+        expect(response.statusCode).toBe(201)
     })
 })
 
