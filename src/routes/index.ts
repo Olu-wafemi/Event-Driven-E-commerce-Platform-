@@ -10,7 +10,7 @@ import ReviewRouter from "./review"
 import ShippingRouter from "./Shipping"
 import SubscriptionRouter from "./subscription"
 import CouponRouter from "./coupon"
-
+import  NotificationRouter from "./Notification"
 const index = (app: any) => {
     app.use('/api/users', Router);
     app.use('/api', paymentRouter)
@@ -23,6 +23,7 @@ const index = (app: any) => {
      app.use('/api', ShippingRouter)
      app.use('/api', SubscriptionRouter)
      app.use('/api', CouponRouter)
+     app.use('/api', NotificationRouter)
 
    
     //app.use('/api',huntRouter)
