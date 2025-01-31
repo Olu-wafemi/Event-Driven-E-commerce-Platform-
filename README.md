@@ -9,17 +9,7 @@
 3. [Prerequisites](#prerequisites)
 4. [Getting Started](#getting-started)
    - [Installation](#installation)
-   - [Configuration](#configuration)
-5. [Project Structure](#project-structure)
-6. [API Endpoints](#api-endpoints)
-7. [Authentication](#authentication)
-8. [Database](#database)
-9. [Events and Messaging](#events-and-messaging)
-10. [Testing](#testing)
-11. [Deployment](#deployment)
-12. [Contributing](#contributing)
-13. [License](#license)
-
+  
 ## Introduction
 
 Welcome to my event-driven e-commerce microservices platform! This README provides an in-depth overview of the project, its features, and instructions for setting up and running the application.
